@@ -3,17 +3,21 @@ package com.example.ProjectFinalMaktab_part3.project.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Component;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.*;
 
-@Component
+
+
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-public class Users {
+public class Users implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -26,19 +30,13 @@ public class Users {
     @Enumerated(EnumType.STRING)
     private StatusUser statusUser;
     @Enumerated(EnumType.STRING)
-    private TypeUser typeUser;
+    @ElementCollection(targetClass = Role.class)
+    @CollectionTable(name = "authoritises",joinColumns =
+    @JoinColumn(name = "email",referencedColumnName = "email"))
+    private List<Role> role;
+    @CreationTimestamp
     private LocalDateTime registrationTime;
+    private Boolean enabled=true;
 
-    @Override
-    public String toString() {
-        return "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", statusUser=" + statusUser +
-                ", typeUser=" + typeUser +
-                ", registrationTime=" + registrationTime ;
 
-    }
 }
