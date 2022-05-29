@@ -4,23 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90301b52-3154-40e0-8731-6b24474dacf6" name="Changes" comment="add dependencies&#10;lombok,postgres,thymeleaf,spring web">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Offer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/SortOrdersBy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Specialist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/StatusUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/SubTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Tasks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/TypeUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Users.java" afterDir="false" />
+    <list default="true" id="90301b52-3154-40e0-8731-6b24474dacf6" name="Changes" comment="insert enum Role ,insert anotation  @CreationTimestamp,insert filed enabed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/ProjectFinalMaktabPart3Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/controller/RegistrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/dto/UsersDto1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add_customer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/findAllUsers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8e0b8da-c095-4b5c-b3d2-23fd5de9c036.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d8e0b8da-c095-4b5c-b3d2-23fd5de9c036.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8e0b8da-c095-4b5c-b3d2-23fd5de9c036/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d8e0b8da-c095-4b5c-b3d2-23fd5de9c036/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/ProjectFinalMaktabPart3Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/model/TypeUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ProjectFinalMaktab_part3/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ProjectFinalMaktab_part3/ProjectFinalMaktabPart3Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
         <option value="HTML File" />
       </list>
@@ -81,12 +91,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/example/ProjectFinalMaktab_part3/project/service/serviceImpl" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.ProjectFinalMaktab_part3.project.dto" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\ProjectFinalMaktab_part3\src\main\java\com\example\ProjectFinalMaktab_part3" />
+      <recent name="C:\Users\Administrator\Desktop\ProjectFinalMaktab_part3\src\main\java\com\example\ProjectFinalMaktab_part3\project\service\serviceImpl" />
       <recent name="C:\Users\Administrator\Desktop\ProjectFinalMaktab_part3\src\main\java\com\example\ProjectFinalMaktab_part3\project" />
+      <recent name="C:\Users\Administrator\Desktop\ProjectFinalMaktab_part3\src\main\java\com\example\ProjectFinalMaktab_part3" />
     </key>
   </component>
   <component name="RunManager">
@@ -112,7 +127,21 @@
       <workItem from="1652613598427" duration="696000" />
       <workItem from="1652987906932" duration="270000" />
       <workItem from="1652992883168" duration="591000" />
-      <workItem from="1653032602207" duration="2023000" />
+      <workItem from="1653032602207" duration="3557000" />
+      <workItem from="1653042905024" duration="2448000" />
+      <workItem from="1653065527661" duration="3561000" />
+      <workItem from="1653114173402" duration="5234000" />
+      <workItem from="1653134529269" duration="320000" />
+      <workItem from="1653413106387" duration="2411000" />
+      <workItem from="1653463602158" duration="604000" />
+      <workItem from="1653471362373" duration="1186000" />
+      <workItem from="1653497603865" duration="4495000" />
+      <workItem from="1653503458488" duration="5845000" />
+      <workItem from="1653539303093" duration="7657000" />
+      <workItem from="1653581957141" duration="819000" />
+      <workItem from="1653583727052" duration="89000" />
+      <workItem from="1653756245753" duration="7451000" />
+      <workItem from="1653802110829" duration="7380000" />
     </task>
     <task id="LOCAL‎۰۰۰۰۱" summary="create project">
       <created>1653033313140</created>
@@ -126,7 +155,43 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۲" />
       <updated>1653033479698</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎۰۰۰۰۳" summary="add package model &#10;insert classes.">
+      <created>1653035522102</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۳" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۳" />
+      <updated>1653035522102</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۰۴" summary="add dependency commons-validator for validator pattern email.">
+      <created>1653036046102</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۴" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۴" />
+      <updated>1653036046102</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۰۵" summary="add dependency spring security">
+      <created>1653076909384</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۵" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۵" />
+      <updated>1653076909384</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۰۶" summary="create package repository and insert interface">
+      <created>1653758509213</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۶" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۶" />
+      <updated>1653758509213</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۰۷" summary="insert class Role">
+      <created>1653805403056</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۷" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۷" />
+      <updated>1653805403056</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۰۸" summary="insert enum Role ,insert anotation  @CreationTimestamp,insert filed enabed">
+      <created>1653805495309</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۸" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۸" />
+      <updated>1653805495309</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -146,6 +211,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create project" />
     <MESSAGE value="add dependencies&#10;lombok,postgres,thymeleaf,spring web" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dependencies&#10;lombok,postgres,thymeleaf,spring web" />
+    <MESSAGE value="add package model &#10;insert classes." />
+    <MESSAGE value="add dependency commons-validator for validator pattern email." />
+    <MESSAGE value="add dependency spring security" />
+    <MESSAGE value="create package repository and insert interface" />
+    <MESSAGE value="insert class Role" />
+    <MESSAGE value="insert enum Role ,insert anotation  @CreationTimestamp,insert filed enabed" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert enum Role ,insert anotation  @CreationTimestamp,insert filed enabed" />
   </component>
 </project>
