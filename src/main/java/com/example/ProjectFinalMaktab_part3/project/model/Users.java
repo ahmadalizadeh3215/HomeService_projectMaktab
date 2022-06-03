@@ -4,13 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -22,20 +22,20 @@ import java.util.*;
 @NoArgsConstructor
 @Data
 @Entity
-public class Users implements Serializable {
+public class Users implements Serializable, UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @NotNull(message = "this filed cannot empty")
+    @NotBlank(message = "Mandatory field")
     private String firstName;
-    @NotNull(message = "this filed cannot empty")
+    @NotBlank(message = "Mandatory field")
     private String lastName;
     @Column(unique = true)
-    @Email(message = "invalid your email")
+    @Email(message = "Mandatory field")
     private String email;
     @Column( nullable = false)
-    @Min(value = 8,message = "invalid your input")
-    @NotNull(message = "this filed cannot empty")
+    @Min(value = 8,message = "The password is at least 8 digits")
+    @NotBlank (message = "Mandatory field")
     private String password;
     @Enumerated(EnumType.STRING)
     private StatusUser statusUser;
@@ -46,7 +46,36 @@ public class Users implements Serializable {
     private List<Role> role;
     @CreationTimestamp
     private LocalDateTime registrationTime;
-    private Boolean enabled=true;
+    private Boolean enabled;
 
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return role;
+    }
+
+    @Override
+    public String getUsername() {
+        return email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return enabled;
+    }
 }
