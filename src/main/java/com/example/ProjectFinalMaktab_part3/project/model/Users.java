@@ -40,7 +40,7 @@ public class Users implements Serializable, UserDetails {
     @Enumerated(EnumType.STRING)
     private StatusUser statusUser;
     @Enumerated(EnumType.STRING)
-    @ElementCollection(targetClass = Role.class)
+    @ElementCollection(targetClass = Role.class,fetch = FetchType.EAGER)
     @CollectionTable(name = "authoritises",joinColumns =
     @JoinColumn(name = "email",referencedColumnName = "email"))
     private List<Role> role;
