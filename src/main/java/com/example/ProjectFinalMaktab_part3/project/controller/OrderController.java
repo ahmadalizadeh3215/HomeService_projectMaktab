@@ -108,12 +108,13 @@ return ResponseEntity.ok(orders1);
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
-    @GetMapping(value = "/PaymentByCredit")
-    public String PaymentByCredit(Integer orderId,Double price){
-        Orders orders=ordersService.findById(orderId).orElseThrow(()
-                ->new IllegalStateException("order "+orderId+" not found!") );
-
-return "test";
+    @PutMapping(value = "/paymentByCredit/{id}")
+    ResponseEntity<Orders> paymentByCredit(@PathVariable("id")Integer id, @RequestBody Orders orders) throws Exception {
+        LOG.info("updating orders: {}", orders);
+      Orders order=ordersService.findById(id).orElseThrow(()->
+                new IllegalStateException("order not found"));
+      ordersService.PaymentCredit(order);
+        return new ResponseEntity<Orders>(order, HttpStatus.OK);
     }
 
 

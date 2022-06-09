@@ -82,7 +82,6 @@ public class SpecialistController {
 
     @PutMapping(value = "/update/{email}")
     public  ResponseEntity<SpecialistDto> update(@PathVariable("email") String email, @RequestBody SpecialistDto  specialistDto) {
-
         LOG.info("updating specialist: {}", specialistDto);
         Specialist specialist = specialistService.findByEmail(email);
         if (specialist == null) {

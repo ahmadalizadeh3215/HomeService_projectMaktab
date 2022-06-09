@@ -14,6 +14,7 @@ public interface OrdersRepository extends GenericRepository<Orders, Integer> {
     List<Orders> showOrdersToSpecialist(@Param("specialist_id") Integer specialist_id);
 
     List<Orders> findByCustomerId(Integer customerId);
+    Orders findByOrderStatus(String orderStatus);
 
 
 
