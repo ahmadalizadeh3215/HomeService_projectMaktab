@@ -23,17 +23,17 @@ public class OrdersServiceImpl extends GenericServiceImpl<Orders, Integer> imple
 
     @Override
     public Orders findBySubTaskName(String subTaskName) {
-        return null;
+        return ordersRepository.findBySubTaskName(subTaskName);
     }
 
     @Override
     public List<Orders> showOrdersToSpecialist(Integer specialist_id) {
-        return null;
+        return ordersRepository.showOrdersToSpecialist(specialist_id);
     }
 
     @Override
     public List<Orders> findByCustomerId(Integer customerId) {
-        return null;
+        return ordersRepository.findByCustomerId(customerId);
     }
 
     @Override
@@ -42,7 +42,8 @@ public class OrdersServiceImpl extends GenericServiceImpl<Orders, Integer> imple
     }
 
     @Override
-    public Orders registrationOrders(String address, LocalDateTime timeWorek, String jobDescription, Double proposedPrice, String customer_email, String subTask_name) {
+    public Orders registrationOrders(String address, LocalDateTime timeWorek, String jobDescription,
+                                     Double proposedPrice, String customer_email, String subTask_name) {
         return null;
     }
 }
