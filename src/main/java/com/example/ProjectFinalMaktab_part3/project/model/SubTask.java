@@ -24,15 +24,5 @@ public class SubTask {
     @ManyToOne
     private Specialist specialist;
 
-    @Override
-    public String toString() {
-        return "UnderService{" +
-                "id=" + id +
-                ", tasks=" + tasks.getName() +
-                ", nameUnderService='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", basePrice=" + basePrice +
-             ", specialist=" + specialist.getUser().getFirstName()+ " " + specialist.getUser().getLastName() +
-                '}';
-    }
+
 }
