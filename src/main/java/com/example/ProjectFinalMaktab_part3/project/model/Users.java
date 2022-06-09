@@ -1,5 +1,6 @@
 package com.example.ProjectFinalMaktab_part3.project.model;
 
+import com.example.ProjectFinalMaktab_part3.project.registration.token.ConfirmationToken;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,10 +23,13 @@ import java.util.*;
 @NoArgsConstructor
 @Data
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="role",
+        discriminatorType = DiscriminatorType.STRING)
 public class Users implements Serializable, UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     @NotBlank(message = "Mandatory field")
     private String firstName;
     @NotBlank(message = "Mandatory field")
@@ -38,7 +42,7 @@ public class Users implements Serializable, UserDetails {
     @NotBlank (message = "Mandatory field")
     private String password;
     @Enumerated(EnumType.STRING)
-    private StatusUser statusUser;
+    private StatusUser statusUser=StatusUser.AwaitingApproval;
     @Enumerated(EnumType.STRING)
     @ElementCollection(targetClass = Role.class,fetch = FetchType.EAGER)
     @CollectionTable(name = "authoritises",joinColumns =
@@ -46,8 +50,18 @@ public class Users implements Serializable, UserDetails {
     private List<Role> role;
     @CreationTimestamp
     private LocalDateTime registrationTime;
-    private Boolean enabled;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<ConfirmationToken> confirmationToken;
+    private Boolean enabled=false;
+    private Boolean locked=false;
 
+    public Users(String firstName, String lastName, String email, String password, List<Role> role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
