@@ -1,24 +1,27 @@
 package com.example.ProjectFinalMaktab_part3.project.model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Component
-@AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Entity
-public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @OneToOne
-    private Users user;
+@Data
+@DiscriminatorValue("CUSTOMER")
+public class Customer extends Users{
+
     private Double validity;
 
-
+    public Customer(String firstName, String lastName,
+                    String email, String password, List<Role> role,
+                    Double validity) {
+        super(firstName, lastName, email, password, role);
+        this.validity = validity;
+    }
 }
