@@ -7,10 +7,10 @@ import com.example.ProjectFinalMaktab_part3.project.model.Admin;
 import java.util.List;
 
 public interface AdminRepository extends GenericRepository<Admin,Integer>  {
-    Admin findByUserEmail(String email);
-    void deleteByUserEmail(String email);
-    List<Admin> findByUserFirstName(String firstName);
-    List<Admin> findByUserLastName(String lastName);
+    Admin findByEmail(String email);
+    void deleteByEmail(String email);
+    List<Admin> findByFirstName(String firstName);
+    List<Admin> findByLastName(String lastName);
 
 
 }

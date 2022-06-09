@@ -7,10 +7,10 @@ import java.util.List;
 
 
 public interface SpecialistRepository extends GenericRepository<Specialist, Integer> {
-    Specialist findByUserEmail(String email);
-    void deleteByUserEmail(String email);
-    Specialist findByUserFirstName(String firstName);
-    Specialist findByUserLastName(String lastName);
+    Specialist findByEmail(String email);
+    void deleteByEmail(String email);
+    Specialist findByFirstName(String firstName);
+    Specialist findByLastName(String lastName);
     Specialist findSpecialistBySubTaskId(Integer subTaskId);
     List<Specialist> findSpecialistBySkill(String skill);
     List<Specialist> findByOrderByScore(Specialist specialist , Sort sort);
