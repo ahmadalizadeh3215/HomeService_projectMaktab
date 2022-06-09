@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class MainController {
-    @RequestMapping("")
+    @RequestMapping("/index")
     public String index(){
-        return "index";
+        return "home/index";
     }
 
 
