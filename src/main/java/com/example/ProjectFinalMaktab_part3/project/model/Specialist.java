@@ -7,18 +7,16 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Component
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-public class Specialist{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @OneToOne
-    private Users user;
+@DiscriminatorValue("SPECIALIST")
+public class Specialist extends Users{
+
     private String skill;
     private Integer score;
     private Double validity;
@@ -27,6 +25,18 @@ public class Specialist{
     @Lob
     private byte[] personalPhoto;
 
+
+    public Specialist(String firstName, String lastName, String email,
+                      String password,  List<Role> role,
+                      String skill, Integer score, Double validity, SubTask subTask,
+                      byte[] personalPhoto) {
+        super(firstName, lastName, email, password, role);
+        this.skill = skill;
+        this.score = score;
+        this.validity = validity;
+        this.subTask = subTask;
+        this.personalPhoto = personalPhoto;
+    }
 }
 
 
