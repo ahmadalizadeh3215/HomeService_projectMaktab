@@ -92,7 +92,7 @@ public class UserServiceImpl extends GenericServiceImpl<Users, Integer> implemen
         userRepository.save(users);
         String token = UUID.randomUUID().toString();
         ConfirmationToken confirmationToken=new ConfirmationToken(
-                token,LocalDateTime.now(),LocalDateTime.now().plusMinutes(15),users);
+                token,LocalDateTime.now(),LocalDateTime.now().plusMinutes(10),users);
         confirmationTokenService.save(confirmationToken);
         return token;
 
