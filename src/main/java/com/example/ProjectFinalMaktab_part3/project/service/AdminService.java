@@ -5,13 +5,13 @@ import com.example.ProjectFinalMaktab_part3.project.model.Admin;
 import java.util.List;
 
 public interface AdminService extends GenericService<Admin, Integer> {
-    Admin findByUserEmail(String email);
+    Admin findByEmail(String email);
 
-    void deleteByUserEmail(String email);
+    void deleteByEmail(String email);
 
-    List<Admin> findByUserFirstName(String firstName);
+    List<Admin> findByFirstName(String firstName);
 
-    List<Admin> findByUserLastName(String lastName);
+    List<Admin> findByLastName(String lastName);
 
 
 }
