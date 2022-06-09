@@ -3,17 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.31">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-13753||-9223372036854775808|c|G
-13753||10|c|G
-13753||10|C|G
-13753||10|T|G</Grants>
-      <IntrospectionStateNumber>28167</IntrospectionStateNumber>
+      <IntrospectionStateNumber>29041</IntrospectionStateNumber>
       <ServerVersion>14.1</ServerVersion>
-      <StartupTime>1652593257</StartupTime>
+      <StartupTime>1654703991</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -817,7 +809,7 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>28168</IntrospectionStateNumber>
+      <IntrospectionStateNumber>29042</IntrospectionStateNumber>
       <ObjectId>13754</ObjectId>
       <Relations>sequence|table|32810|32811|1
 sequence|table|41009|41010|1
@@ -827,16 +819,13 @@ sequence|table|41068|41069|1
 sequence|table|41087|41088|1
 sequence|table|41107|41108|1
 sequence|table|57655|57656|1
-sequence|table|212829|212830|1
-sequence|table|212835|212836|1
-sequence|table|212841|212842|1
-sequence|table|212847|212848|1
-sequence|table|212853|212854|1
-sequence|table|212861|212862|1
-sequence|table|212867|212868|1
-sequence|table|212875|212876|1
-sequence|table|212881|212882|1
-sequence|table|212964|212965|1
+sequence|table|222456|222457|1
+sequence|table|222462|222463|1
+sequence|table|222468|222469|1
+sequence|table|222474|222475|1
+sequence|table|222482|222483|1
+sequence|table|222490|222491|1
+sequence|table|222496|222497|2
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4265,827 +4254,777 @@ sequence|table|212964|212965|1
     <schema id="264" parent="4" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>28168</IntrospectionStateNumber>
+      <IntrospectionStateNumber>29042</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <sequence id="265" parent="264" name="admin_id_seq">
+    <sequence id="265" parent="264" name="comment_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>212829</ObjectId>
-      <StateNumber>28086</StateNumber>
+      <ObjectId>222456</ObjectId>
+      <StateNumber>29016</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="266" parent="264" name="comment_id_seq">
-      <DataType>integer|0s</DataType>
-      <ObjectId>212835</ObjectId>
-      <StateNumber>28087</StateNumber>
+    <sequence id="266" parent="264" name="confirmation_token_id_seq">
+      <DataType>bigint|0s</DataType>
+      <ObjectId>222462</ObjectId>
+      <StateNumber>29017</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="267" parent="264" name="customer_id_seq">
+    <sequence id="267" parent="264" name="offer_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>212841</ObjectId>
-      <StateNumber>28088</StateNumber>
+      <ObjectId>222468</ObjectId>
+      <StateNumber>29018</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="268" parent="264" name="offer_id_seq">
+    <sequence id="268" parent="264" name="orders_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>212847</ObjectId>
-      <StateNumber>28089</StateNumber>
+      <ObjectId>222474</ObjectId>
+      <StateNumber>29019</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="269" parent="264" name="orders_id_seq">
+    <sequence id="269" parent="264" name="sub_task_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>212853</ObjectId>
-      <StateNumber>28090</StateNumber>
+      <ObjectId>222482</ObjectId>
+      <StateNumber>29020</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="270" parent="264" name="person_id_seq">
+    <sequence id="270" parent="264" name="tasks_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>212964</ObjectId>
-      <StateNumber>28165</StateNumber>
+      <ObjectId>222490</ObjectId>
+      <StateNumber>29021</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="271" parent="264" name="specialist_id_seq">
-      <DataType>integer|0s</DataType>
-      <ObjectId>212861</ObjectId>
-      <StateNumber>28091</StateNumber>
+    <sequence id="271" parent="264" name="users_id_seq">
+      <DataType>bigint|0s</DataType>
+      <ObjectId>222496</ObjectId>
+      <StateNumber>29022</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="272" parent="264" name="sub_task_id_seq">
-      <DataType>integer|0s</DataType>
-      <ObjectId>212867</ObjectId>
-      <StateNumber>28092</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <sequence id="273" parent="264" name="tasks_id_seq">
-      <DataType>integer|0s</DataType>
-      <ObjectId>212875</ObjectId>
-      <StateNumber>28093</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <sequence id="274" parent="264" name="users_id_seq">
-      <DataType>integer|0s</DataType>
-      <ObjectId>212881</ObjectId>
-      <StateNumber>28094</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <table id="275" parent="264" name="admin">
-      <ObjectId>212830</ObjectId>
-      <StateNumber>28101</StateNumber>
+    <table id="272" parent="264" name="authoritises">
+      <ObjectId>222451</ObjectId>
+      <StateNumber>29015</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="276" parent="264" name="comment">
-      <ObjectId>212836</ObjectId>
-      <StateNumber>28102</StateNumber>
+    <table id="273" parent="264" name="comment">
+      <ObjectId>222457</ObjectId>
+      <StateNumber>29028</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="277" parent="264" name="customer">
-      <ObjectId>212842</ObjectId>
-      <StateNumber>28102</StateNumber>
+    <table id="274" parent="264" name="confirmation_token">
+      <ObjectId>222463</ObjectId>
+      <StateNumber>29030</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="278" parent="264" name="offer">
-      <ObjectId>212848</ObjectId>
-      <StateNumber>28105</StateNumber>
+    <table id="275" parent="264" name="offer">
+      <ObjectId>222469</ObjectId>
+      <StateNumber>29031</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="279" parent="264" name="orders">
-      <ObjectId>212854</ObjectId>
-      <StateNumber>28105</StateNumber>
+    <table id="276" parent="264" name="orders">
+      <ObjectId>222475</ObjectId>
+      <StateNumber>29031</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="280" parent="264" name="person">
-      <ObjectId>212965</ObjectId>
-      <StateNumber>28165</StateNumber>
+    <table id="277" parent="264" name="sub_task">
+      <ObjectId>222483</ObjectId>
+      <StateNumber>29034</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="281" parent="264" name="specialist">
-      <ObjectId>212862</ObjectId>
-      <StateNumber>28142</StateNumber>
+    <table id="278" parent="264" name="tasks">
+      <ObjectId>222491</ObjectId>
+      <StateNumber>29036</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="282" parent="264" name="sub_task">
-      <ObjectId>212868</ObjectId>
-      <StateNumber>28108</StateNumber>
+    <table id="279" parent="264" name="users">
+      <ObjectId>222497</ObjectId>
+      <StateNumber>29028</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="283" parent="264" name="tasks">
-      <ObjectId>212876</ObjectId>
-      <StateNumber>28111</StateNumber>
+    <table id="280" parent="264" name="users_confirmation_token">
+      <ObjectId>222504</ObjectId>
+      <StateNumber>29038</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="284" parent="264" name="users">
-      <ObjectId>212882</ObjectId>
-      <StateNumber>28101</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <column id="285" parent="275" name="id">
-      <DataType>integer|0s</DataType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>28086</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="286" parent="275" name="user_id">
-      <DataType>integer|0s</DataType>
-      <Position>2</Position>
-      <StateNumber>28086</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <foreign-key id="287" parent="275" name="fkq7pdkck9je126wpd9ijw3uwml">
-      <ColNames>user_id</ColNames>
-      <ObjectId>212895</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <RefKeyName>users_pkey</RefKeyName>
-      <StateNumber>28101</StateNumber>
-      <RefTableId>212882</RefTableId>
-      <RefTableName>users</RefTableName>
-      <RefTableKind>table</RefTableKind>
-    </foreign-key>
-    <index id="288" parent="275" name="admin_pkey">
-      <ClassIds>1978</ClassIds>
-      <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212833</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28086</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="289" parent="275" name="admin_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212834</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28086</StateNumber>
-      <UnderlyingIndexId>212833</UnderlyingIndexId>
-    </key>
-    <column id="290" parent="276" name="id">
-      <DataType>integer|0s</DataType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>28087</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="291" parent="276" name="comments">
+    <column id="281" parent="272" name="email">
       <DataType>varchar(255)|0s</DataType>
-      <Position>2</Position>
-      <StateNumber>28087</StateNumber>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>29015</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="292" parent="276" name="score">
+    <column id="282" parent="272" name="role">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>29015</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="283" parent="273" name="id">
+      <DataType>integer|0s</DataType>
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>29016</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="284" parent="273" name="comments">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>29016</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="285" parent="273" name="score">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
-      <StateNumber>28087</StateNumber>
+      <StateNumber>29016</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="293" parent="276" name="customer_id">
-      <DataType>integer|0s</DataType>
+    <column id="286" parent="273" name="customer_id">
+      <DataType>bigint|0s</DataType>
       <Position>4</Position>
-      <StateNumber>28087</StateNumber>
-      <TypeId>23</TypeId>
+      <StateNumber>29016</StateNumber>
+      <TypeId>20</TypeId>
     </column>
-    <column id="294" parent="276" name="specialist_id">
-      <DataType>integer|0s</DataType>
+    <column id="287" parent="273" name="specialist_id">
+      <DataType>bigint|0s</DataType>
       <Position>5</Position>
-      <StateNumber>28087</StateNumber>
-      <TypeId>23</TypeId>
+      <StateNumber>29016</StateNumber>
+      <TypeId>20</TypeId>
     </column>
-    <foreign-key id="295" parent="276" name="fklwqielki359fs4py1a4iw2fdt">
+    <foreign-key id="288" parent="273" name="fk3hyosnpfilocdya73m79fav1b">
       <ColNames>customer_id</ColNames>
-      <ObjectId>212900</ObjectId>
+      <ObjectId>222515</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <StateNumber>28102</StateNumber>
-      <RefTableId>212842</RefTableId>
-      <RefTableName>customer</RefTableName>
-      <RefTableKind>table</RefTableKind>
-    </foreign-key>
-    <foreign-key id="296" parent="276" name="fk68dhdm5k8klex3h7jji3b5dqp">
-      <ColNames>specialist_id</ColNames>
-      <ObjectId>212905</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <StateNumber>28103</StateNumber>
-      <RefTableId>212862</RefTableId>
-      <RefTableName>specialist</RefTableName>
-      <RefTableKind>table</RefTableKind>
-    </foreign-key>
-    <index id="297" parent="276" name="comment_pkey">
-      <ClassIds>1978</ClassIds>
-      <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212839</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28087</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="298" parent="276" name="comment_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212840</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28087</StateNumber>
-      <UnderlyingIndexId>212839</UnderlyingIndexId>
-    </key>
-    <column id="299" parent="277" name="id">
-      <DataType>integer|0s</DataType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>28088</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="300" parent="277" name="validity">
-      <DataType>double precision|0s</DataType>
-      <Position>2</Position>
-      <StateNumber>28088</StateNumber>
-      <TypeId>701</TypeId>
-    </column>
-    <column id="301" parent="277" name="user_id">
-      <DataType>integer|0s</DataType>
-      <Position>3</Position>
-      <StateNumber>28088</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <foreign-key id="302" parent="277" name="fkra1cb3fu95r1a0m7aksow0nk4">
-      <ColNames>user_id</ColNames>
-      <ObjectId>212910</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <StateNumber>28104</StateNumber>
-      <RefTableId>212882</RefTableId>
+      <RefColPositions>2</RefColPositions>
+      <RefKeyName>users_pkey</RefKeyName>
+      <StateNumber>29028</StateNumber>
+      <RefTableId>222497</RefTableId>
       <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="303" parent="277" name="customer_pkey">
+    <foreign-key id="289" parent="273" name="fkc329aixoveekqv1vwakthp9l2">
+      <ColNames>specialist_id</ColNames>
+      <ObjectId>222520</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>2</RefColPositions>
+      <RefKeyName>users_pkey</RefKeyName>
+      <StateNumber>29029</StateNumber>
+      <RefTableId>222497</RefTableId>
+      <RefTableName>users</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="290" parent="273" name="comment_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212845</ObjectId>
+      <ObjectId>222460</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28088</StateNumber>
+      <StateNumber>29016</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="304" parent="277" name="customer_pkey">
+    <key id="291" parent="273" name="comment_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212846</ObjectId>
+      <ObjectId>222461</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28088</StateNumber>
-      <UnderlyingIndexId>212845</UnderlyingIndexId>
+      <StateNumber>29016</StateNumber>
+      <UnderlyingIndexId>222460</UnderlyingIndexId>
     </key>
-    <column id="305" parent="278" name="id">
+    <column id="292" parent="274" name="id">
+      <DataType>bigint|0s</DataType>
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>29017</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="293" parent="274" name="confirmed_at">
+      <DataType>timestamp|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>29017</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="294" parent="274" name="created_at">
+      <DataType>timestamp|0s</DataType>
+      <Position>3</Position>
+      <StateNumber>29017</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="295" parent="274" name="expired_at">
+      <DataType>timestamp|0s</DataType>
+      <Position>4</Position>
+      <StateNumber>29017</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="296" parent="274" name="token">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>5</Position>
+      <StateNumber>29017</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="297" parent="274" name="users_id">
+      <DataType>bigint|0s</DataType>
+      <Position>6</Position>
+      <StateNumber>29017</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="298" parent="274" name="fkjkui0c3qy41svu9mtesy578r5">
+      <ColNames>users_id</ColNames>
+      <ObjectId>222525</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>2</RefColPositions>
+      <RefKeyName>users_pkey</RefKeyName>
+      <StateNumber>29030</StateNumber>
+      <RefTableId>222497</RefTableId>
+      <RefTableName>users</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="299" parent="274" name="confirmation_token_pkey">
+      <ClassIds>3124</ClassIds>
+      <ColNames>id</ColNames>
+      <CollationIds>0</CollationIds>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>222466</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>29017</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="300" parent="274" name="confirmation_token_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>222467</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>29017</StateNumber>
+      <UnderlyingIndexId>222466</UnderlyingIndexId>
+    </key>
+    <column id="301" parent="275" name="id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>28089</StateNumber>
+      <StateNumber>29018</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="306" parent="278" name="date_submission">
+    <column id="302" parent="275" name="date_submission">
       <DataType>timestamp|0s</DataType>
       <Position>2</Position>
-      <StateNumber>28089</StateNumber>
+      <StateNumber>29018</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="307" parent="278" name="duration_of_work">
+    <column id="303" parent="275" name="duration_of_work">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
-      <StateNumber>28089</StateNumber>
+      <StateNumber>29018</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="308" parent="278" name="proposed_price">
+    <column id="304" parent="275" name="proposed_price">
       <DataType>double precision|0s</DataType>
       <Position>4</Position>
-      <StateNumber>28089</StateNumber>
+      <StateNumber>29018</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="309" parent="278" name="start_time">
+    <column id="305" parent="275" name="start_time">
       <DataType>timestamp|0s</DataType>
       <Position>5</Position>
-      <StateNumber>28089</StateNumber>
+      <StateNumber>29018</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="310" parent="278" name="orders_id">
+    <column id="306" parent="275" name="orders_id">
       <DataType>integer|0s</DataType>
       <Position>6</Position>
-      <StateNumber>28089</StateNumber>
+      <StateNumber>29018</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="311" parent="278" name="specialist_id">
-      <DataType>integer|0s</DataType>
+    <column id="307" parent="275" name="specialist_id">
+      <DataType>bigint|0s</DataType>
       <Position>7</Position>
-      <StateNumber>28089</StateNumber>
-      <TypeId>23</TypeId>
+      <StateNumber>29018</StateNumber>
+      <TypeId>20</TypeId>
     </column>
-    <foreign-key id="312" parent="278" name="fko6nem6t34skfe5wkh5vqrga28">
+    <foreign-key id="308" parent="275" name="fko6nem6t34skfe5wkh5vqrga28">
       <ColNames>orders_id</ColNames>
-      <ObjectId>212915</ObjectId>
+      <ObjectId>222530</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
       <RefKeyName>orders_pkey</RefKeyName>
-      <StateNumber>28105</StateNumber>
-      <RefTableId>212854</RefTableId>
+      <StateNumber>29031</StateNumber>
+      <RefTableId>222475</RefTableId>
       <RefTableName>orders</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="313" parent="278" name="fknu5lrwue4oj6rnk6exmpgt7du">
+    <foreign-key id="309" parent="275" name="fkrp3aftaj0mra8h2op4fgispx">
       <ColNames>specialist_id</ColNames>
-      <ObjectId>212920</ObjectId>
+      <ObjectId>222535</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <RefKeyName>specialist_pkey</RefKeyName>
-      <StateNumber>28106</StateNumber>
-      <RefTableId>212862</RefTableId>
-      <RefTableName>specialist</RefTableName>
-      <RefTableKind>table</RefTableKind>
-    </foreign-key>
-    <index id="314" parent="278" name="offer_pkey">
-      <ClassIds>1978</ClassIds>
-      <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212851</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28089</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="315" parent="278" name="offer_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212852</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28089</StateNumber>
-      <UnderlyingIndexId>212851</UnderlyingIndexId>
-    </key>
-    <column id="316" parent="279" name="id">
-      <DataType>integer|0s</DataType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>28090</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="317" parent="279" name="address">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>2</Position>
-      <StateNumber>28090</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="318" parent="279" name="date_order_registration">
-      <DataType>timestamp|0s</DataType>
-      <Position>3</Position>
-      <StateNumber>28090</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="319" parent="279" name="date_time_work">
-      <DataType>timestamp|0s</DataType>
-      <Position>4</Position>
-      <StateNumber>28090</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="320" parent="279" name="job_description">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>5</Position>
-      <StateNumber>28090</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="321" parent="279" name="order_status">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>6</Position>
-      <StateNumber>28090</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="322" parent="279" name="proposed_price">
-      <DataType>double precision|0s</DataType>
-      <Position>7</Position>
-      <StateNumber>28090</StateNumber>
-      <TypeId>701</TypeId>
-    </column>
-    <column id="323" parent="279" name="customer_id">
-      <DataType>integer|0s</DataType>
-      <Position>8</Position>
-      <StateNumber>28090</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="324" parent="279" name="sub_task_id">
-      <DataType>integer|0s</DataType>
-      <Position>9</Position>
-      <StateNumber>28090</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <foreign-key id="325" parent="279" name="fk624gtjin3po807j3vix093tlf">
-      <ColNames>customer_id</ColNames>
-      <ObjectId>212925</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <RefKeyName>customer_pkey</RefKeyName>
-      <StateNumber>28107</StateNumber>
-      <RefTableId>212842</RefTableId>
-      <RefTableName>customer</RefTableName>
-      <RefTableKind>table</RefTableKind>
-    </foreign-key>
-    <foreign-key id="326" parent="279" name="fk3mvt3rbfxf58fq7id90aecdf5">
-      <ColNames>sub_task_id</ColNames>
-      <ObjectId>212930</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <RefKeyName>sub_task_pkey</RefKeyName>
-      <StateNumber>28108</StateNumber>
-      <RefTableId>212868</RefTableId>
-      <RefTableName>sub_task</RefTableName>
-      <RefTableKind>table</RefTableKind>
-    </foreign-key>
-    <index id="327" parent="279" name="orders_pkey">
-      <ClassIds>1978</ClassIds>
-      <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212859</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28090</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="328" parent="279" name="orders_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212860</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28090</StateNumber>
-      <UnderlyingIndexId>212859</UnderlyingIndexId>
-    </key>
-    <column id="329" parent="280" name="id">
-      <DataType>integer|0s</DataType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>28165</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="330" parent="280" name="first_name">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>2</Position>
-      <StateNumber>28165</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="331" parent="280" name="last_name">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>3</Position>
-      <StateNumber>28165</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="332" parent="280" name="person_pkey">
-      <ClassIds>1978</ClassIds>
-      <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212970</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28165</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="333" parent="280" name="person_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212971</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>28165</StateNumber>
-      <UnderlyingIndexId>212970</UnderlyingIndexId>
-    </key>
-    <column id="334" parent="281" name="id">
-      <DataType>integer|0s</DataType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>28091</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="335" parent="281" name="personal_photo">
-      <DataType>oid|0s</DataType>
-      <Position>2</Position>
-      <StateNumber>28091</StateNumber>
-      <TypeId>26</TypeId>
-    </column>
-    <column id="336" parent="281" name="score">
-      <DataType>integer|0s</DataType>
-      <Position>3</Position>
-      <StateNumber>28091</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="337" parent="281" name="skill">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>4</Position>
-      <StateNumber>28091</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="338" parent="281" name="validity">
-      <DataType>double precision|0s</DataType>
-      <Position>5</Position>
-      <StateNumber>28091</StateNumber>
-      <TypeId>701</TypeId>
-    </column>
-    <column id="339" parent="281" name="user_id">
-      <DataType>integer|0s</DataType>
-      <Position>6</Position>
-      <StateNumber>28091</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="340" parent="281" name="sub_task_id">
-      <DataType>integer|0s</DataType>
-      <Position>7</Position>
-      <StateNumber>28142</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <foreign-key id="341" parent="281" name="fkcl18n8e8facaokqbr3ocanxnb">
-      <ColNames>user_id</ColNames>
-      <ObjectId>212935</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <StateNumber>28109</StateNumber>
-      <RefTableId>212882</RefTableId>
+      <RefColPositions>2</RefColPositions>
+      <RefKeyName>users_pkey</RefKeyName>
+      <StateNumber>29032</StateNumber>
+      <RefTableId>222497</RefTableId>
       <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="342" parent="281" name="fkloxw8kgypx12gijfrh23mgslf">
+    <index id="310" parent="275" name="offer_pkey">
+      <ClassIds>1978</ClassIds>
+      <ColNames>id</ColNames>
+      <CollationIds>0</CollationIds>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>222472</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>29018</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="311" parent="275" name="offer_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>222473</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>29018</StateNumber>
+      <UnderlyingIndexId>222472</UnderlyingIndexId>
+    </key>
+    <column id="312" parent="276" name="id">
+      <DataType>integer|0s</DataType>
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>29019</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="313" parent="276" name="address">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>29019</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="314" parent="276" name="date_order_registration">
+      <DataType>timestamp|0s</DataType>
+      <Position>3</Position>
+      <StateNumber>29019</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="315" parent="276" name="date_time_work">
+      <DataType>timestamp|0s</DataType>
+      <Position>4</Position>
+      <StateNumber>29019</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="316" parent="276" name="job_description">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>5</Position>
+      <StateNumber>29019</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="317" parent="276" name="order_status">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>6</Position>
+      <StateNumber>29019</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="318" parent="276" name="proposed_price">
+      <DataType>double precision|0s</DataType>
+      <Position>7</Position>
+      <StateNumber>29019</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="319" parent="276" name="customer_id">
+      <DataType>bigint|0s</DataType>
+      <Position>8</Position>
+      <StateNumber>29019</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="320" parent="276" name="sub_task_id">
+      <DataType>integer|0s</DataType>
+      <Position>9</Position>
+      <StateNumber>29019</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="321" parent="276" name="fksjfs85qf6vmcurlx43cnc16gy">
+      <ColNames>customer_id</ColNames>
+      <ObjectId>222540</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>2</RefColPositions>
+      <RefKeyName>users_pkey</RefKeyName>
+      <StateNumber>29033</StateNumber>
+      <RefTableId>222497</RefTableId>
+      <RefTableName>users</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="322" parent="276" name="fk3mvt3rbfxf58fq7id90aecdf5">
       <ColNames>sub_task_id</ColNames>
-      <ObjectId>212951</ObjectId>
+      <ObjectId>222545</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
       <RefKeyName>sub_task_pkey</RefKeyName>
-      <StateNumber>28143</StateNumber>
-      <RefTableId>212868</RefTableId>
+      <StateNumber>29034</StateNumber>
+      <RefTableId>222483</RefTableId>
       <RefTableName>sub_task</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="343" parent="281" name="specialist_pkey">
+    <index id="323" parent="276" name="orders_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212865</ObjectId>
+      <ObjectId>222480</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28091</StateNumber>
+      <StateNumber>29019</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="344" parent="281" name="specialist_pkey">
+    <key id="324" parent="276" name="orders_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212866</ObjectId>
+      <ObjectId>222481</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28091</StateNumber>
-      <UnderlyingIndexId>212865</UnderlyingIndexId>
+      <StateNumber>29019</StateNumber>
+      <UnderlyingIndexId>222480</UnderlyingIndexId>
     </key>
-    <column id="345" parent="282" name="id">
+    <column id="325" parent="277" name="id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>28092</StateNumber>
+      <StateNumber>29020</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="346" parent="282" name="base_price">
+    <column id="326" parent="277" name="base_price">
       <DataType>double precision|0s</DataType>
       <Position>2</Position>
-      <StateNumber>28092</StateNumber>
+      <StateNumber>29020</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="347" parent="282" name="description">
+    <column id="327" parent="277" name="description">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
-      <StateNumber>28092</StateNumber>
+      <StateNumber>29020</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="348" parent="282" name="name">
+    <column id="328" parent="277" name="name">
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
-      <StateNumber>28092</StateNumber>
+      <StateNumber>29020</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="349" parent="282" name="specialist_id">
-      <DataType>integer|0s</DataType>
+    <column id="329" parent="277" name="specialist_id">
+      <DataType>bigint|0s</DataType>
       <Position>5</Position>
-      <StateNumber>28092</StateNumber>
-      <TypeId>23</TypeId>
+      <StateNumber>29020</StateNumber>
+      <TypeId>20</TypeId>
     </column>
-    <column id="350" parent="282" name="tasks_id">
+    <column id="330" parent="277" name="tasks_id">
       <DataType>integer|0s</DataType>
       <Position>6</Position>
-      <StateNumber>28092</StateNumber>
+      <StateNumber>29020</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="351" parent="282" name="fketyyrynwgmi7uut13egiwfl62">
+    <foreign-key id="331" parent="277" name="fklxqtvxsq6ia983i0xjychq28v">
       <ColNames>specialist_id</ColNames>
-      <ObjectId>212940</ObjectId>
+      <ObjectId>222550</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <StateNumber>28110</StateNumber>
-      <RefTableId>212862</RefTableId>
-      <RefTableName>specialist</RefTableName>
+      <RefColPositions>2</RefColPositions>
+      <RefKeyName>users_pkey</RefKeyName>
+      <StateNumber>29035</StateNumber>
+      <RefTableId>222497</RefTableId>
+      <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="352" parent="282" name="fkjk0txhm3fpc9ucw8awrw3rtg7">
+    <foreign-key id="332" parent="277" name="fkjk0txhm3fpc9ucw8awrw3rtg7">
       <ColNames>tasks_id</ColNames>
-      <ObjectId>212945</ObjectId>
+      <ObjectId>222555</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>28111</StateNumber>
-      <RefTableId>212876</RefTableId>
+      <RefKeyName>tasks_pkey</RefKeyName>
+      <StateNumber>29036</StateNumber>
+      <RefTableId>222491</RefTableId>
       <RefTableName>tasks</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="353" parent="282" name="sub_task_pkey">
+    <index id="333" parent="277" name="sub_task_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212873</ObjectId>
+      <ObjectId>222488</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28092</StateNumber>
+      <StateNumber>29020</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="354" parent="282" name="uk_jsinbsbsx29e0h6g1rf8sh49s">
+    <index id="334" parent="277" name="uk_jsinbsbsx29e0h6g1rf8sh49s">
       <ClassIds>3126</ClassIds>
       <ColNames>name</ColNames>
       <CollationIds>100</CollationIds>
       <CollationNames>default</CollationNames>
-      <ObjectId>212889</ObjectId>
-      <StateNumber>28096</StateNumber>
+      <ObjectId>222507</ObjectId>
+      <StateNumber>29024</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="355" parent="282" name="sub_task_pkey">
+    <key id="335" parent="277" name="sub_task_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212874</ObjectId>
+      <ObjectId>222489</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28092</StateNumber>
-      <UnderlyingIndexId>212873</UnderlyingIndexId>
+      <StateNumber>29020</StateNumber>
+      <UnderlyingIndexId>222488</UnderlyingIndexId>
     </key>
-    <key id="356" parent="282" name="uk_jsinbsbsx29e0h6g1rf8sh49s">
+    <key id="336" parent="277" name="uk_jsinbsbsx29e0h6g1rf8sh49s">
       <ColNames>name</ColNames>
-      <ObjectId>212890</ObjectId>
-      <StateNumber>28096</StateNumber>
-      <UnderlyingIndexId>212889</UnderlyingIndexId>
+      <ObjectId>222508</ObjectId>
+      <StateNumber>29024</StateNumber>
+      <UnderlyingIndexId>222507</UnderlyingIndexId>
     </key>
-    <column id="357" parent="283" name="id">
+    <column id="337" parent="278" name="id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>28093</StateNumber>
+      <StateNumber>29021</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="358" parent="283" name="name">
+    <column id="338" parent="278" name="name">
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
-      <StateNumber>28093</StateNumber>
+      <StateNumber>29021</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="359" parent="283" name="tasks_pkey">
+    <index id="339" parent="278" name="tasks_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212879</ObjectId>
+      <ObjectId>222494</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28093</StateNumber>
+      <StateNumber>29021</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="360" parent="283" name="uk_s90mh6056fm69w0ilwka74vut">
+    <index id="340" parent="278" name="uk_s90mh6056fm69w0ilwka74vut">
       <ClassIds>3126</ClassIds>
       <ColNames>name</ColNames>
       <CollationIds>100</CollationIds>
       <CollationNames>default</CollationNames>
-      <ObjectId>212891</ObjectId>
-      <StateNumber>28098</StateNumber>
+      <ObjectId>222509</ObjectId>
+      <StateNumber>29025</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="361" parent="283" name="tasks_pkey">
+    <key id="341" parent="278" name="tasks_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212880</ObjectId>
+      <ObjectId>222495</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28093</StateNumber>
-      <UnderlyingIndexId>212879</UnderlyingIndexId>
+      <StateNumber>29021</StateNumber>
+      <UnderlyingIndexId>222494</UnderlyingIndexId>
     </key>
-    <key id="362" parent="283" name="uk_s90mh6056fm69w0ilwka74vut">
+    <key id="342" parent="278" name="uk_s90mh6056fm69w0ilwka74vut">
       <ColNames>name</ColNames>
-      <ObjectId>212892</ObjectId>
-      <StateNumber>28098</StateNumber>
-      <UnderlyingIndexId>212891</UnderlyingIndexId>
+      <ObjectId>222510</ObjectId>
+      <StateNumber>29025</StateNumber>
+      <UnderlyingIndexId>222509</UnderlyingIndexId>
     </key>
-    <column id="363" parent="284" name="id">
-      <DataType>integer|0s</DataType>
-      <IdentityKind>by-default</IdentityKind>
+    <column id="343" parent="279" name="role">
+      <DataType>varchar(31)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>28094</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="364" parent="284" name="email">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>2</Position>
-      <StateNumber>28094</StateNumber>
+      <StateNumber>29022</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="365" parent="284" name="first_name">
+    <column id="344" parent="279" name="id">
+      <DataType>bigint|0s</DataType>
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>29022</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="345" parent="279" name="email">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
-      <StateNumber>28094</StateNumber>
+      <StateNumber>29022</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="366" parent="284" name="last_name">
-      <DataType>varchar(255)|0s</DataType>
+    <column id="346" parent="279" name="enabled">
+      <DataType>boolean|0s</DataType>
       <Position>4</Position>
-      <StateNumber>28094</StateNumber>
-      <TypeId>1043</TypeId>
+      <StateNumber>29022</StateNumber>
+      <TypeId>16</TypeId>
     </column>
-    <column id="367" parent="284" name="password">
-      <DataType>varchar(8)|0s</DataType>
-      <NotNull>1</NotNull>
+    <column id="347" parent="279" name="first_name">
+      <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
-      <StateNumber>28094</StateNumber>
+      <StateNumber>29022</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="368" parent="284" name="registration_time">
-      <DataType>timestamp|0s</DataType>
+    <column id="348" parent="279" name="last_name">
+      <DataType>varchar(255)|0s</DataType>
       <Position>6</Position>
-      <StateNumber>28094</StateNumber>
+      <StateNumber>29022</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="349" parent="279" name="locked">
+      <DataType>boolean|0s</DataType>
+      <Position>7</Position>
+      <StateNumber>29022</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="350" parent="279" name="password">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StateNumber>29022</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="351" parent="279" name="registration_time">
+      <DataType>timestamp|0s</DataType>
+      <Position>9</Position>
+      <StateNumber>29022</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="369" parent="284" name="status_user">
+    <column id="352" parent="279" name="status_user">
       <DataType>varchar(255)|0s</DataType>
-      <Position>7</Position>
-      <StateNumber>28094</StateNumber>
+      <Position>10</Position>
+      <StateNumber>29022</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="370" parent="284" name="type_user">
+    <column id="353" parent="279" name="validity">
+      <DataType>double precision|0s</DataType>
+      <Position>11</Position>
+      <StateNumber>29022</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="354" parent="279" name="personal_photo">
+      <DataType>oid|0s</DataType>
+      <Position>12</Position>
+      <StateNumber>29022</StateNumber>
+      <TypeId>26</TypeId>
+    </column>
+    <column id="355" parent="279" name="score">
+      <DataType>integer|0s</DataType>
+      <Position>13</Position>
+      <StateNumber>29022</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="356" parent="279" name="skill">
       <DataType>varchar(255)|0s</DataType>
-      <Position>8</Position>
-      <StateNumber>28094</StateNumber>
+      <Position>14</Position>
+      <StateNumber>29022</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="371" parent="284" name="users_pkey">
-      <ClassIds>1978</ClassIds>
+    <column id="357" parent="279" name="sub_task_id">
+      <DataType>integer|0s</DataType>
+      <Position>15</Position>
+      <StateNumber>29022</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="358" parent="279" name="fke7ggh9k7fgawmyeu29shcitg4">
+      <ColNames>sub_task_id</ColNames>
+      <ObjectId>222560</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <RefKeyName>sub_task_pkey</RefKeyName>
+      <StateNumber>29037</StateNumber>
+      <RefTableId>222483</RefTableId>
+      <RefTableName>sub_task</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="359" parent="279" name="users_pkey">
+      <ClassIds>3124</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212887</ObjectId>
+      <ObjectId>222502</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28094</StateNumber>
+      <StateNumber>29022</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="372" parent="284" name="uk_6dotkott2kjsp8vw4d0m25fb7">
+    <index id="360" parent="279" name="uk_6dotkott2kjsp8vw4d0m25fb7">
       <ClassIds>3126</ClassIds>
       <ColNames>email</ColNames>
       <CollationIds>100</CollationIds>
       <CollationNames>default</CollationNames>
-      <ObjectId>212893</ObjectId>
-      <StateNumber>28100</StateNumber>
+      <ObjectId>222511</ObjectId>
+      <StateNumber>29026</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="373" parent="284" name="users_pkey">
+    <key id="361" parent="279" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>212888</ObjectId>
+      <ObjectId>222503</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>28094</StateNumber>
-      <UnderlyingIndexId>212887</UnderlyingIndexId>
+      <StateNumber>29022</StateNumber>
+      <UnderlyingIndexId>222502</UnderlyingIndexId>
     </key>
-    <key id="374" parent="284" name="uk_6dotkott2kjsp8vw4d0m25fb7">
+    <key id="362" parent="279" name="uk_6dotkott2kjsp8vw4d0m25fb7">
       <ColNames>email</ColNames>
-      <ObjectId>212894</ObjectId>
-      <StateNumber>28100</StateNumber>
-      <UnderlyingIndexId>212893</UnderlyingIndexId>
+      <ObjectId>222512</ObjectId>
+      <StateNumber>29026</StateNumber>
+      <UnderlyingIndexId>222511</UnderlyingIndexId>
+    </key>
+    <column id="363" parent="280" name="users_id">
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>29023</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="364" parent="280" name="confirmation_token_id">
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>29023</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="365" parent="280" name="fklu4ci4jrofp6p5vnfxqtscce8">
+      <ColNames>users_id</ColNames>
+      <ObjectId>222570</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>2</RefColPositions>
+      <RefKeyName>users_pkey</RefKeyName>
+      <StateNumber>29039</StateNumber>
+      <RefTableId>222497</RefTableId>
+      <RefTableName>users</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="366" parent="280" name="fkdxvcmo8e5ua8xl0ls59e71ftl">
+      <ColNames>confirmation_token_id</ColNames>
+      <ObjectId>222565</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <RefKeyName>confirmation_token_pkey</RefKeyName>
+      <StateNumber>29038</StateNumber>
+      <RefTableId>222463</RefTableId>
+      <RefTableName>confirmation_token</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="367" parent="280" name="uk_f18x1w3ax1rr6gglao29rsat2">
+      <ClassIds>3124</ClassIds>
+      <ColNames>confirmation_token_id</ColNames>
+      <CollationIds>0</CollationIds>
+      <ObjectId>222513</ObjectId>
+      <StateNumber>29027</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="368" parent="280" name="uk_f18x1w3ax1rr6gglao29rsat2">
+      <ColNames>confirmation_token_id</ColNames>
+      <ObjectId>222514</ObjectId>
+      <StateNumber>29027</StateNumber>
+      <UnderlyingIndexId>222513</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
