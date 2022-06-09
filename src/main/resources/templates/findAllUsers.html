@@ -55,7 +55,7 @@
         <div class="card-body">
             <div th:switch="${findAllUsers}" class="container my-5">
                 <p class="my-5">
-                    <a href="/users/addNew" class="btn btn-primary"><i
+                    <a href="/users/register" class="btn btn-primary"><i
                             class="fas fa-user-plus ml-2"> Add User </i></a>
                 </p>
                 <div class="col-md-10">
@@ -80,9 +80,7 @@
                                 <td th:text="${users.lastName}"></td>
                                 <td th:text="${users.email}"></td>
                                 <td th:text="${#temporals.format(users.registrationTime,'yyyy/mm/dd HH:MM:SS')}"></td>
-                               <!--<td><a th:href="@{/students/edit/{id}(id=${student.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
-                                <td><a th:href="@{/students/delete/{id}(id=${student.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
-                           --> </tr>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
