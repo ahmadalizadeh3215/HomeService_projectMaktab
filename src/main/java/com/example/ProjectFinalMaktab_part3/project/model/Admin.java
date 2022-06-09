@@ -6,15 +6,16 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.util.List;
+
 @Component
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Admin {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @OneToOne
-    private Users user;
+@DiscriminatorValue("ADMIN")
+public class Admin extends Users{
+
+    public Admin(String firstName, String lastName,
+                 String email, String password, List<Role> role) {
+        super(firstName, lastName, email, password, role);
+    }
 }
