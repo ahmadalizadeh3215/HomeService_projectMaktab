@@ -61,7 +61,7 @@ public class RegistrationService {
                 "hi \n" +name +"  <br/>"+
                 "\n" +
               "<a href="+ link +" >Verify</a><br/>"+
-                " Email validity is 15 minutes."+
+                " Email validity is 10 minutes."+
 
                 "</body>\n" +
                 "</html>" );
