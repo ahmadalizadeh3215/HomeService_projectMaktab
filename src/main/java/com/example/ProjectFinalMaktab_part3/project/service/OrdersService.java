@@ -16,5 +16,7 @@ public interface OrdersService extends GenericService<Orders, Integer> {
 
     Orders registrationOrders(String address, LocalDateTime timeWorek, String jobDescription
             , Double proposedPrice, String customer_email, String subTask_name);
+    Orders findByOrderStatus(String orderStatus);
+    public void PaymentCredit(Orders orders) throws Exception;
 
 }
