@@ -1,18 +1,10 @@
 package com.example.ProjectFinalMaktab_part3.project.controller;
 
-import com.example.ProjectFinalMaktab_part3.project.dto.UserDto;
-import com.example.ProjectFinalMaktab_part3.project.model.Customer;
-import com.example.ProjectFinalMaktab_part3.project.model.Role;
 import com.example.ProjectFinalMaktab_part3.project.model.Users;
 
 import com.example.ProjectFinalMaktab_part3.project.service.Impl.UserServiceImpl;
-import lombok.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.propertyeditors.StringTrimmerEditor;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -48,7 +40,8 @@ public class UserController {
 
         return new ResponseEntity<Users>(HttpStatus.OK);
     }
-@PostMapping(value = "/saveUser")
+
+    @PostMapping(value = "/saveUser")
     public ResponseEntity<Void> create(@RequestBody Users user, UriComponentsBuilder ucBuilder) {
         LOG.info("creating new user: {}", user);
 
@@ -66,7 +59,6 @@ public class UserController {
     }
 
 
-
     @GetMapping(value = "/findAllUsers")
     public ResponseEntity<List<Users>> getAll() {
         LOG.info("getting all Users");
@@ -78,6 +70,16 @@ public class UserController {
         }
 
         return new ResponseEntity<List<Users>>(users, HttpStatus.OK);
+    }
+    @GetMapping(value = "/gridSreach/")
+    public ResponseEntity<List<Users>> gridSreach(@RequestParam(required = false, name = "id") Integer id,
+                                                  @RequestParam(required = false, name = "email") String email,
+                                                  @RequestParam(required = false, name = "firstName") String firstName,
+                                                  @RequestParam(required = false, name = "lastName") String lastName) {
+
+        List<Users> users = userService.gridSearch(id,email,firstName,lastName);
+
+        return new ResponseEntity<List<Users>>(users,HttpStatus.OK);
     }
 
 }
