@@ -20,21 +20,22 @@ public class SubTaskServiceImpl extends GenericServiceImpl<SubTask, Integer> imp
 
     @Override
     public SubTask findByName(String subTaskName) {
-        return null;
+        return subTaskRepository.findByName(subTaskName);
     }
 
     @Override
     public void deleteAllById(Integer subTaskId) {
+        subTaskRepository.deleteAllById(subTaskId);
 
     }
 
     @Override
     public void deleteBySpecialistId(Integer specialistId) {
-
+        subTaskRepository.deleteBySpecialistId(specialistId);
     }
 
     @Override
     public SubTask findBySpecialistId(Integer specialistId) {
-        return null;
+        return subTaskRepository.findBySpecialistId(specialistId);
     }
 }
