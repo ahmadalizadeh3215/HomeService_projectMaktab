@@ -50,8 +50,8 @@ public class Users implements Serializable, UserDetails {
     private List<Role> role;
     @CreationTimestamp
     private LocalDateTime registrationTime;
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<ConfirmationToken> confirmationToken;
+    /*@OneToMany(cascade = CascadeType.ALL)
+    private List<ConfirmationToken> confirmationToken;*/
     private Boolean enabled=false;
     private Boolean locked=false;
 
