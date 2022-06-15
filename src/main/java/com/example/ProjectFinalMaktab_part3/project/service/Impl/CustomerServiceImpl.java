@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CustomerServiceImpl extends GenericServiceImpl<Customer, Integer> implements CustomerService {
@@ -97,4 +98,8 @@ public class CustomerServiceImpl extends GenericServiceImpl<Customer, Integer> i
         return token;
     }
 
+    @Override
+    public Optional<Customer> findById(Integer entityId) {
+        return customerRepository.findById(entityId);
+    }
 }
