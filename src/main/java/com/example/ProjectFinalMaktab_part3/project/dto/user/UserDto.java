@@ -1,20 +1,32 @@
 package com.example.ProjectFinalMaktab_part3.project.dto.user;
 
-import com.example.ProjectFinalMaktab_part3.project.model.enumoration.Role;
-import lombok.Data;
-import javax.persistence.*;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+@AllArgsConstructor
 @Data
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="role",
-        discriminatorType = DiscriminatorType.STRING)
 public class UserDto  {
-    private Long id;
+
+    @NotNull(message = "This field is mandatory")
     private String firstName;
+
+    @NotNull(message = "This field is mandatory")
     private String lastName;
+
+    @NotNull(message = "This field is mandatory")
+    @Pattern(regexp = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$",
+            message = "The email entered is incorrect")
     private String email;
+
+    @NotNull(message = "This field is mandatory")
+    @Min(value = 8,message = "The password must be at least 8 digits long")
     private String password;
-    private Role role;
+
+
+
 
 
 }
